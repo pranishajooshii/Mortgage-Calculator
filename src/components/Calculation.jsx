@@ -1,6 +1,6 @@
 import React from "react";
 
-const Calculation = () => {
+const Calculation = ({result}) => {
   return (
     <>
       <div className="px-8">
@@ -23,13 +23,19 @@ const Calculation = () => {
               <p className="text-lg sm:text-base text-slate-400 pt-5 ">
                 Your monthly repayments
               </p>
-              <p className="text-5xl text-[hsl(61,70%,52%)] ">12345</p>
+              <p className="text-5xl text-[hsl(61,70%,52%)] ">
+                {" "}
+                £{result.monthlyPayment}
+              </p>
               <div className="h-0.5 bg-slate-700"></div>
 
               <p className="text-lg sm:text-base text-slate-400">
                 Total you will repay over the term
               </p>
-              <p className="text-5xl pb-5">12345</p>
+              <p className="text-5xl pb-5 text-[hsl(61,70%,52%)]">
+                {" "}
+                 £{result.totalPayment}
+              </p>
             </div>
           </div>
         </div>
